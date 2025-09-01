@@ -67,6 +67,7 @@ body.scale-xlarge .btn-primary {
   float: right;
 }
 
+
 .logo-bar {
   position: relative;
   height: 80px;
@@ -1830,3 +1831,128 @@ body.dark-mode .control-toolbar {
 .btn-close {
   filter: invert(100%) brightness(100%);
 }
+
+/* ============================================================
+   LIQUID GLASS CONTAINER
+   ------------------------------------------------------------
+   Core styling for translucent, blurred glass effect
+============================================================ */
+
+/* ============================================================
+   GLASS THEME WRAPPER
+   ------------------------------------------------------------
+   Applies glass styling only when .theme-glass is active
+============================================================ */
+
+.glass .sidebar,
+.glass .banner,
+.glass .card,
+.glass .modal,
+.glass .banner-wrapper,
+/*.glass .center-heading,*/
+.glass .logo-container,
+.glass .navbar,
+.glass .dropdown-item,
+.glass .desktop-toolbar,
+/*.glass .page,*/
+.glass .col-md-4,
+.glass .col-md-8,
+.glass .btn-primary,
+/*.glass .modal-dialog,*/
+.glass .alert,
+.glass .carousel-item,
+.glass .carousel-inner,
+.glass .img-fluid,
+.glass .nhs-header {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  -webkit-backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2rem;
+  box-shadow:
+    0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  /*position: relative;*/
+}
+
+/* Optional shine overlay */
+.glass .sidebar::after,
+.glass .banner::after,
+.glass .card::after,
+.glass .modal::after,
+.glass .banner-wrapper::after,
+/*.glass .center-heading::after,*/
+.glass .logo-container::after,
+.glass .navbar::after,
+.glass .dropdown-item::after,
+.glass .desktop-toolbar::after,
+/*.glass .page::after,*/
+.glass .col-md-4::after,
+.glass .col-md-8::after,
+.glass .btn-primary::after,
+/*.glass .modal-dialog::after,*/
+.glass .alert::after,
+.glass .carousel-item::after,
+.glass .carousel-inner::after,
+.glass .img-fluid::after,
+.glass .nhs-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  backdrop-filter: blur(1px);
+  box-shadow:
+    inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+    inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+
+.glass .navbar,
+.glass .nhs-header {
+  overflow: visible;
+  z-index: 100;
+}
+
+/*
+.glass .dropdown,
+.glass .dropdown::after,
+
+.glass .sidebar,
+.glass .banner,
+.glass .card,
+.glass .modal,
+.glass .banner-wrapper,
+.glass .center-heading,
+.glass .logo-container,
+.glass .navbar,
+.glass .desktop-toolbar,
+.glass .page,
+.glass .col-md-4,
+.glass .col-md-8,
+.glass .btn-primary,
+.glass .modal-dialog,
+.glass .nhs-header
+
+.glass .sidebar::after,
+.glass .banner::after,
+.glass .card::after,
+.glass .modal::after,
+.glass .banner-wrapper::after,
+.glass .center-heading::after,
+.glass .logo-container::after,
+.glass .navbar::after,
+.glass .desktop-toolbar::after,
+.glass .page::after,
+.glass .col-md-4::after,
+.glass .col-md-8::after,
+.glass .btn-primary::after,
+.glass .modal-dialog::after,
+.glass .nhs-header::after
