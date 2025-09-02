@@ -1876,6 +1876,31 @@ body.dark-mode .control-toolbar {
   /*position: relative;*/
 }
 
+.glass .sidebar,
+.glass .banner,
+.glass .card,
+.glass .modal,
+.glass .banner-wrapper,
+/*.glass .center-heading,*/
+/*.glass .logo-container,*/
+.glass .navbar,
+.glass .dropdown-item,
+.glass .desktop-toolbar,
+/*.glass .page,*/
+.glass .col-md-4,
+.glass .col-md-8,
+.glass .btn-primary,
+/*.glass .modal-dialog,*/
+.glass .alert,
+.glass .carousel-item,
+.glass .carousel-inner,
+.glass .img-fluid,
+.glass .nhs-header {
+  padding: 20px;
+
+}
+
+
 /* Optional shine overlay */
 .glass .sidebar::after,
 .glass .banner::after,
@@ -1912,6 +1937,7 @@ body.dark-mode .control-toolbar {
   opacity: 0.6;
   z-index: -1;
   filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+
 }
 
 
@@ -1920,39 +1946,3 @@ body.dark-mode .control-toolbar {
   overflow: visible;
   z-index: 100;
 }
-
-/*
-.glass .dropdown,
-.glass .dropdown::after,
-
-.glass .sidebar,
-.glass .banner,
-.glass .card,
-.glass .modal,
-.glass .banner-wrapper,
-.glass .center-heading,
-.glass .logo-container,
-.glass .navbar,
-.glass .desktop-toolbar,
-.glass .page,
-.glass .col-md-4,
-.glass .col-md-8,
-.glass .btn-primary,
-.glass .modal-dialog,
-.glass .nhs-header
-
-.glass .sidebar::after,
-.glass .banner::after,
-.glass .card::after,
-.glass .modal::after,
-.glass .banner-wrapper::after,
-.glass .center-heading::after,
-.glass .logo-container::after,
-.glass .navbar::after,
-.glass .desktop-toolbar::after,
-.glass .page::after,
-.glass .col-md-4::after,
-.glass .col-md-8::after,
-.glass .btn-primary::after,
-.glass .modal-dialog::after,
-.glass .nhs-header::after
