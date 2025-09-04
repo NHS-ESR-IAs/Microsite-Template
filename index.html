@@ -21,7 +21,7 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Learning Information Hub</title>
+  <title>ESR Information Hub</title>
   <!-- Bootstrap 5.3.6 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Custom Stylesheet -->
@@ -46,7 +46,7 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
 
       <!-- Site Title (Center) -->
       <div class="center-heading text-center flex-grow-1">
-        <h1 class="mb-0">Learning Information Hub</h1>
+        <h1 class="mb-0">ESR Information Hub</h1>
       </div>
 
       <!-- Logos (Right) -->
@@ -64,7 +64,7 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
       <img src="https://assets.codepen.io/8889025/LEA_Banner3.png" alt="Welcome Hub Banner"
         class="Banner_image w-100" />
       <div class="banner-text-overlay">
-        <h1>Lady Elizabeth Ann NHS Trust</h1>
+        <h1>Sheffield Children’s NHS Foundation Trust</h1>
       </div>
     </div>
 
@@ -87,48 +87,14 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
               <a class="nav-link" onclick="showPage('home')">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="showPage('guides')">Guides</a>
+              <a class="nav-link" onclick="showPage('esr-manager-self-service')">Manager Self Service</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="showPage('faqs')">FAQs</a>
+              <a class="nav-link" onclick="showPage('esr-employee-self-service')">Employeee Self Service</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" onclick="showPage('SUP')">Support Request</a>
             </li>
-
-            <!-- ==== ADD A DROPDOWN MENU ==== -->
-            <!-- To create a dropdown menu, use this structure -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                onclick="showPage('CC')">Catalogue</a>
-              <ul class="dropdown-menu">
-                <!-- ==== ADD A NORMAL DROPDOWN ITEM ==== -->
-                <!-- Each dropdown item below links to a page -->
-                <li>
-                  <a class="dropdown-item" onclick="showPage('SaMT')">Statutory and Mandatory Training</a>
-                </li>
-
-                <!-- ==== ADD A SUBMENU ==== -->
-                <!-- To add a submenu (nested within dropdown), use this structure -->
-                <li class="dropdown-submenu">
-                  <a class="dropdown-item submenu-toggle" href="#" onclick="showPage('NSMT')">Non Statutory and
-                    Mandatory Training</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" onclick="showPage('NSaMT1')">eLearning Modules</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" onclick="showPage('NSaMT2')">Workshops</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" onclick="showPage('NSaMT3')">Coaching Sessions</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- ==== END SUBMENU ==== -->
-              </ul>
-            </li>
-            <!-- ==== END DROPDOWN MENU ==== -->
             <details class="mobile-toolbar d-sm-none mt-3">
               <summary class="btn btn-outline-secondary w-100">
                 Search & Settings
@@ -225,7 +191,7 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
   <!-- Collapsible Sidebar -->
   <div class="offcanvas offcanvas-start sidebar theme-bg" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarLabel">
     <div class="offcanvas-header">
-      <h5 id="sidebarLabel">Learning Information Hub</h5>
+      <h5 id="sidebarLabel">ESR Information Hub</h5>
       <button type="button" class="btn-close btn-outline-light text-reset" data-bs-dismiss="offcanvas"
         aria-label="Close"></button>
     </div>
@@ -233,36 +199,14 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
       <ul class="nav navbar-nav flex-column">
         <!-- Simple Links -->
         <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" onclick="showPage('home')">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" onclick="showPage('guides')">Guides</a>
+          <a class="nav-link" onclick="showPage('esr-manager-self-service')">Manager Self Service</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" onclick="showPage('faqs')">FAQs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" onclick="showPage('SUP')">Support Request</a>
-        </li>
-
-        <!-- Top-Level Dropdown -->
-        <li class="nav-item">
-          <button class="nav-link toggle-submenu w-100 text-start">Catalogue ▾</button>
-          <ul class="submenu list-unstyled ms-3">
-            <li>
-              <a class="nav-link" onclick="showPage('SaMT')">Statutory & Mandatory Training</a>
-            </li>
-
-            <!-- Nested Submenu -->
-            <li>
-              <button class="nav-link toggle-submenu w-100 text-start">Non Statutory ▾</button>
-              <ul class="submenu list-unstyled ms-3">
-                <li><a class="nav-link" onclick="showPage('NSaMT1')">eLearning Modules</a></li>
-                <li><a class="nav-link" onclick="showPage('NSaMT2')">Workshops</a></li>
-                <li><a class="nav-link" onclick="showPage('NSaMT3')">Coaching Sessions</a></li>
-              </ul>
-            </li>
-          </ul>
+          <a class="nav-link" onclick="showPage('esr-employee-self-service')">Employeee Self Service</a>
         </li>
       </ul>
 
@@ -310,567 +254,360 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
       <div class="row">
         <!-- Sidebar Gradient Title -->
         <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Learning and Development Hub</h3>
+          <h3 class="gradient-text">Electronic Staff Record (ESR)</h3>
         </div>
         <!-- Main Welcome Text -->
         <div class="col-md-8">
-          <h4>Welcome to the Learning and Development Hub</h4>
+          <h4>Electronic Staff Record (ESR)</h4>
+
+          <!-- What is ESR -->
+          <h5>What is ESR?</h5>
           <p>
-            The hub provides access to a range of information to support
-            personal learning and development needs, guidance on using ESR
-            Learning Management, and a catalogue of available training
-            courses.
+            The Electronic Staff Record (ESR) is a human resources and payroll system used by most NHS Trusts in England
+            and Wales. It manages the payroll for over one million NHS employees.
+          </p>
+
+          <!-- ESR Self Service Overview -->
+          <h5>About ESR Self Service</h5>
+          <p>ESR Self Service gives you direct access to manage and view your workforce information. There are three
+            levels of access:</p>
+          <ul>
+            <li>
+              <strong>Employee Self Service</strong> (already available to all colleagues): View and update personal
+              information such as address, contact details, and equality data. Access payslips and e-learning.
+            </li>
+            <li>
+              <strong>Supervisor Self Service</strong> (Available from 1 September 2025): Line managers can view and
+              manage information for their direct reports, including employment details, training compliance, and
+              appraisal dates. No pay-impacting changes allowed. Assigned to line managers who are <em>not</em>
+              authorised signatories.
+            </li>
+            <li>
+              <strong>Manager Self Service</strong> (Available from 1 September 2025): Includes Supervisor access plus
+              ability to make pay-impacting changes (e.g., amend working hours, submit leaver notifications). Assigned
+              to line managers who <em>are</em> authorised signatories.
+            </li>
+          </ul>
+
+          <!-- Accessing ESR -->
+          <h5>Accessing ESR</h5>
+          <p>
+            If you have Manager or Supervisor ESR access, you’ll need a smartcard to log in.
+            <a href="[insert Welcome Page Smartcard Guide]">Click here for smartcard login instructions</a>.
           </p>
           <p>
-            We hope you find this page useful and informative. Please explore
-            the sections and links provided. If you have feedback or
-            suggestions, we’d love to hear from you. Your input helps us
-            improve and serve you better — thank you for being part of our
-            team.
+            If you have Employee ESR access only, you can log in using your username and password.
+          </p>
+          <p>
+            For login issues or to request Manager/Supervisor access, please contact the ESR Self Service helpdesk
+            (details below).
+          </p>
+
+          <!-- Using ESR Self Service -->
+          <h5>Using ESR Self Service</h5>
+          <p>Dedicated pages contain useful information and user guides for each ESR Self Service area:</p>
+          <ul>
+            <li>
+              <a href="[Add link to Employee Self Service Sub Page]">Employee Self Service pages</a>
+            </li>
+            <li>
+              <a href="[Add link to Manager Self Service Sub Page]">Manager & Supervisor Self Service pages</a>
+            </li>
+          </ul>
+
+          <!-- Help and Support -->
+          <h5>Help and Support</h5>
+          <p>
+            For support with ESR Self Service, contact our dedicated helpdesk:
+            <a href="mailto:scn-tr.esr_self_service@nhs.net">scn-tr.esr_self_service@nhs.net</a>
           </p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ================================= -->
-  <!-- ====== GUIDES PAGE SECTION ====== -->
-  <!-- ================================= -->
-  <div id="guides" class="page">
+  <!-- =============================== -->
+  <!-- === ESR Employee Self Service Page === -->
+  <!-- =============================== -->
+  <div id="esr-employee-self-service" class="page">
     <div class="container">
       <div class="row">
         <!-- Sidebar Gradient Title -->
         <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Guidance</h3>
+          <h3 class="gradient-text">ESR Employee Self Service</h3>
         </div>
-        <!-- Main Description -->
+
+        <!-- Main Content Area -->
         <div class="col-md-8">
-          <h4>ESR Learning Management Guidance</h4>
+          <!-- Introduction -->
+          <h4>Introduction</h4>
           <p>
-            This section provides access to user guides for using the ESR
-            Learning Management system.
+            ESR Employee Self Service is available to all employees and allows you to view and update your personal
+            information such as address, contact details, and equality data. You can also access your payslips and
+            complete e-learning.
           </p>
-        </div>
-      </div>
-      <!-- ============================================ -->
-      <!-- ====== GUIDE SECTION BUTTONS & MODALS ====== -->
-      <!-- ============================================ -->
-      <div class="row">
-        <div class="col-md">
-          <!-- Guide: Identifying Outstanding Training -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#outstandingTrainingModal">
-            Identifying Training that is Outstanding
-          </button>
-          <div class="modal fade" id="outstandingTrainingModal" tabindex="-1"
-            aria-labelledby="outstandingTrainingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="outstandingTrainingModalLabel">
-                    Identifying Outstanding Training
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/shared/PIG4DQZLRr6NG346ToihJg?scrollToActionId=f250e1dd"
-                    width="100%" height="800" allowfullscreen style="
-                        aspect-ratio: 16 / 12;
-                        border: 0;
-                        min-height: 480px;
-                      "></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Enrolling onto e-Learning -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#enrolmentModal">
-            Enrolling onto e-Learning Courses
-          </button>
-          <div class="modal fade" id="enrolmentModal" tabindex="-1" aria-labelledby="enrolmentModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="enrolmentModalLabel">
-                    Enrolling onto e-Learning Courses
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=426c0f0f"
-                    width="100%" height="800" allowfullscreen style="
-                        aspect-ratio: 16 / 12;
-                        border: 0;
-                        min-height: 480px;
-                      "></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Playing e-Learning Modules -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#playCoursesModal">
-            Playing e-Learning Courses you are Enrolled On
-          </button>
-          <div class="modal fade" id="playCoursesModal" tabindex="-1" aria-labelledby="playCoursesModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="playCoursesModalLabel">
-                    Playing Enrolled e-Learning Courses
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=4c19c4b1"
-                    width="100%" height="800" allowfullscreen style="
-                        aspect-ratio: 16 / 12;
-                        border: 0;
-                        min-height: 480px;
-                      "></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Classroom Training Enrolment -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#classroomTrainingModal">
-            Enrolling onto Classroom Training
-          </button>
-          <div class="modal fade" id="classroomTrainingModal" tabindex="-1"
-            aria-labelledby="classroomTrainingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="classroomTrainingModalLabel">
-                    Enrolling onto Classroom Training
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=17ab0147"
-                    width="100%" height="800" allowfullscreen style="
-                        aspect-ratio: 16 / 12;
-                        border: 0;
-                        min-height: 480px;
-                      "></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Viewing Booked Classes -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#bookedClassesModal">
-            Viewing Details of Classes you are Booked On
-          </button>
-          <div class="modal fade" id="bookedClassesModal" tabindex="-1" aria-labelledby="bookedClassesModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="bookedClassesModalLabel">
-                    Viewing Booked Class Details
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=1fda98e6"
-                    width="100%" height="800" allowfullscreen style="
-                        aspect-ratio: 16 / 12;
-                        border: 0;
-                        min-height: 480px;
-                      "></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of Cards -->
+
+          <!-- Accessing ESR -->
+          <h4>Accessing Employee Self Service</h4>
+          <p>
+            Visit <a href="https://my.esr.nhs.uk" target="_blank">my.esr.nhs.uk</a> to log in.
+            <br>If you’re a manager with Manager Self Service access, use your smartcard.
+            <br>If you have employee-only access, log in with your username and password.
+          </p>
+
+          <!-- Functionality Overview -->
+          <h4>What Can I Do in ESR Employee Self Service?</h4>
+          <ul>
+            <li>View and access your payslips and P60s</li>
+            <li>View your training record and complete e-learning</li>
+            <li>Update personal information</li>
+            <li>View employment information</li>
+            <li>View your Total Reward Statement</li>
+          </ul>
+
+          <!-- User Guides -->
+          <h4>Employee Self Service User Guides</h4>
+          <ul>
+            <li><a href="[Insert ESS Portal Overview]">Employee Portal Overview</a></li>
+            <li><a href="[Insert ESS Guide]">Employee Self Service User Guide</a></li>
+          </ul>
+          <p><strong>Note:</strong> National e-learning content is available via ESR. You must be logged in to access
+            it.</p>
+
+          <!-- Quick Help Topics -->
+          <h4>My ESR</h4>
+          <ul>
+            <li>How to reset your password</li>
+            <li>Managing notifications</li>
+            <li>Learner Homepage Overview</li>
+          </ul>
+
+          <h4>My Pay and Rewards</h4>
+          <ul>
+            <li>Viewing online payslips</li>
+            <li>Viewing online P60s</li>
+            <li>Viewing your Total Reward Statement</li>
+          </ul>
+
+          <h4>My Personal Information</h4>
+          <ul>
+            <li>Updating name and marital status</li>
+            <li>Updating address</li>
+            <li>Adding emergency contact details</li>
+            <li>Recording phone number</li>
+            <li>Recording Equality and Diversity details</li>
+            <li>Viewing employment information</li>
+          </ul>
+
+          <!-- FAQs -->
+          <h4>FAQs</h4>
+          <details>
+            <summary>Can I only access current payslips?</summary>
+            <p>Both current and historical payslips are available. Historical records go back to your start date or
+              2014.</p>
+          </details>
+          <details>
+            <summary>Will I be able to access my e-payslips after leaving the Trust?</summary>
+            <p>
+              Yes, via the ESR Leavers Dashboard for 90 days post-departure. Be sure to download any documents you wish
+              to keep.
+            </p>
+          </details>
+          <details>
+            <summary>Is ESR Self Service the same system used for e-learning?</summary>
+            <p>Yes. ESR is the Trust’s HR, Payroll, and Learning Management system.</p>
+          </details>
+          <details>
+            <summary>What if I forget my password?</summary>
+            <p>
+              Use the “Forgotten password” link on the ESR login screen. For login issues, contact
+              <a href="mailto:scn-tr.esr_self_service@nhs.net">scn-tr.esr_self_service@nhs.net</a>
+            </p>
+          </details>
+          <details>
+            <summary>Can I access ESR on my phone or tablet?</summary>
+            <p>
+              Yes, but first enable internet access from an NHS network (N3). Use the button in the top right of the ESR
+              Portal homepage. Once granted, you can access ESR remotely or via the MyESR app.
+            </p>
+          </details>
+          <details>
+            <summary>How do I access the My ESR App?</summary>
+            <p>
+              Download it from the Apple or Android app stores. Search “My ESR” to locate.
+            </p>
+          </details>
+          <details>
+            <summary>Can I use a smartcard for Employee Self Service?</summary>
+            <p>
+              Yes, although it’s not required. You can log in with your username and password.
+            </p>
+          </details>
+
+          <!-- Support -->
+          <h4>Further Support</h4>
+          <p>
+            For help or technical issues, contact the ESR Self Service Helpdesk:
+            <a href="mailto:scn-tr.esr_self_service@nhs.net">scn-tr.esr_self_service@nhs.net</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
+
   <!-- =============================== -->
-  <!-- ====== FAQS PAGE SECTION ====== -->
+  <!-- ===== ESR Manager Self Service Page ===== -->
   <!-- =============================== -->
-  <div id="faqs" class="page">
+  <div id="esr-manager-self-service" class="page">
     <div class="container">
       <div class="row">
         <!-- Sidebar Gradient Title -->
         <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">FAQs</h3>
+          <h3 class="gradient-text">ESR Manager Self Service</h3>
         </div>
-        <!-- FAQ Introduction -->
-        <div class="col-md-8">
-          <h4>ESR Learning Management Guidance</h4>
-          <p>
-            This section provides answers to common questions about using the
-            ESR Learning Management system.
-          </p>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md">
-          <!-- FAQ 1: Compliance Not Updated -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#complianceIssueModal">
-            I've completed training but my compliance hasn't updated — what
-            can I do?
-          </button>
-          <div class="modal fade" id="complianceIssueModal" tabindex="-1" aria-labelledby="complianceIssueModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">
-                    Compliance Not Updated
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p>
-                    <strong>E-learning:</strong> Ensure you’ve clicked the
-                    house icon to exit and earned a completion certificate.
-                  </p>
-                  <p>
-                    <strong>Face-to-face/MS Teams:</strong> Allow up to 10
-                    working days for manual updates. If still missing, email
-                    <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a>.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ 2: External Training Recognition -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#externalTrainingModal">
-            Will mandatory training from another organisation be recognised?
-          </button>
-          <div class="modal fade" id="externalTrainingModal" tabindex="-1" aria-labelledby="externalTrainingModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="externalTrainingModalLabel">
-                    External Training Recognition
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p>
-                    Most training transfers via the IAT process. If any
-                    records appear missing, email
-                    <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a> with
-                    evidence for manual review.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ 3: Certification Expired -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#certificationExpiredModal">
-            What do I do if my certification says "expired"?
-          </button>
-          <div class="modal fade" id="certificationExpiredModal" tabindex="-1"
-            aria-labelledby="certificationExpiredModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="certificationExpiredModalLabel">
-                    Certification Expired
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p>
-                    <strong>Renew your competency:</strong> Re-access the
-                    course as soon as possible. If progress resets, ask your
-                    manager to confirm completion via email.
-                  </p>
-                  <p>
-                    If you're locked out or concerned, contact
-                    <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a>.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ 4: Incorrect Requirements Display -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#incorrectRequirementModal">
-            My Compliance Portlet shows the wrong requirements — what now?
-          </button>
-          <div class="modal fade" id="incorrectRequirementModal" tabindex="-1"
-            aria-labelledby="incorrectRequirementModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="incorrectRequirementModalLabel">
-                    Incorrect Compliance Requirements
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p>
-                    Email
-                    <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a> with
-                    the incorrect details so your matrix can be updated.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ 5: Missing Play Button -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#playButtonIssueModal">
-            My ‘Play’ button is greyed out or missing — how do I start the
-            course?
-          </button>
-          <div class="modal fade" id="playButtonIssueModal" tabindex="-1" aria-labelledby="playButtonIssueModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="playButtonIssueModalLabel">
-                    Missing Play Button Help
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <ol>
-                    <li>
-                      Go to ‘My Compliance’, select the course, and click the
-                      magnifying glass icon.
-                    </li>
-                    <li>
-                      If unsubscribed, click 'Details', then 'Subscribe' and
-                      'Enrol'.
-                    </li>
-                    <li>
-                      On the next screen, click 'Enrol' for course modules.
-                    </li>
-                    <li>
-                      If the green 'Play' button doesn't appear, try 'Select
-                      an Action' and choose 'Play'.
-                    </li>
-                    <li>
-                      If nothing appears, click the module title to reveal a
-                      secondary 'Select an Action'.
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ====================================== -->
-  <!-- ====== COURSE CATALOGUE SECTION ====== -->
-  <!-- ====================================== -->
-  <div id="CC" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Course Catalogue</h3>
-        </div>
-        <!-- Catalogue Description -->
-        <div class="col-md-8">
-          <h4>Browse Available Courses</h4>
-          <p>
-            You can book these via ESR. The catalogue is divided by type
-            below:
-          </p>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SaMT')">
-            Statutory and Mandatory Training
-          </button>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('NSaMT')">
-            Non Statutory and Mandatory Training
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ==================================================== -->
-  <!-- ====== STATUTORY & MANDATORY TRAINING SECTION ====== -->
-  <!-- ==================================================== -->
-  <div id="SaMT" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Statutory and Mandatory Training</h3>
-        </div>
-        <!-- Section Description -->
-        <div class="col-md-8">
-          <h4>Required Training for All Roles</h4>
-          <p>
-            Courses shown in My Compliance within ESR must be completed. Use
-            the guides section for instructions on how to launch these.
-          </p>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SaMT')">
-            Statutory and Mandatory Training
-          </button>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('NSaMT')">
-            Non Statutory and Mandatory Training
-          </button>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md">
-          <!--  Basic Life Support -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#blsModal">
-            Basic Life Support (BLS)
-          </button>
-          <div class="modal fade" id="blsModal" tabindex="-1" aria-labelledby="blsModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="blsModalLabel">
-                    Basic Life Support (BLS)
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p>
-                    <strong>Who should attend:</strong> Staff with emergency
-                    response duties.
-                  </p>
-                  <p>
-                    <strong>Method:</strong> Face-to-face session (3 hours 30
-                    minutes).
-                  </p>
-                  <p>
-                    <strong>Details:</strong> Covers theory and practical
-                    assessment. Mandatory for roles with access to emergency
-                    equipment.
-                  </p>
-                  <p>
-                    <a class="btn btn-primary" href="#"
-                      onclick="openPopup('https://intranet.tewv.nhs.uk/training-centre')">BOOK NOW</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- End of Cards -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ======================================================== -->
-  <!-- ====== NON STATUTORY & MANDATORY TRAINING SECTION ====== -->
-  <!-- ======================================================== -->
-  <div id="NSaMT" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Non Statutory Mandatory Training</h3>
-        </div>
-        <!-- Page Description -->
+        <!-- Main Content Area -->
         <div class="col-md-8">
-          <h4>Optional & Supplementary Courses</h4>
+          <!-- Introduction -->
+          <h4>Introduction</h4>
           <p>
-            This section lists additional courses available via ESR that
-            complement statutory training.
+            ESR Manager Self Service enables managers to update and action changes for their team in ESR.
           </p>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SaMT')">
-            Statutory and Mandatory Training
-          </button>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('NSaMT')">
-            Non Statutory and Mandatory Training
-          </button>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md">
-          <!-- Example: Appraiser Training Modal -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#appraiserTrainingModal">
-            Appraiser Training
-          </button>
-          <div class="modal fade" id="appraiserTrainingModal" tabindex="-1"
-            aria-labelledby="appraiserTrainingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="appraiserTrainingModalLabel">
-                    Appraiser Training
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p>
-                    <strong>Audience:</strong>
-                    <em>Details to be confirmed</em>
-                  </p>
-                  <p>
-                    <strong>Method:</strong> <em>Details to be confirmed</em>
-                  </p>
-                  <p>
-                    <strong>Additional Info:</strong>
-                    <em>Details to be confirmed</em>
-                  </p>
-                  <p>
-                    <a class="btn btn-primary" href="#" onclick="openPopup('')">BOOK NOW</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p>There are two levels of access:</p>
+          <ul>
+            <li>
+              <strong>Supervisor Self Service</strong>: View and manage direct reports’ information (employment,
+              training, appraisals). No pay-impacting changes. Assigned to line managers who are <em>not</em> authorised
+              signatories.
+            </li>
+            <li>
+              <strong>Manager Self Service</strong>: Includes Supervisor access plus pay-impacting changes (e.g. working
+              hours, leaver notifications). Assigned to authorised signatories.
+            </li>
+          </ul>
+          <p>
+            Below you’ll find links to access ESR, supported changes, user guides, and helpdesk contact details.
+          </p>
 
-          <!-- End of Cards -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ===================================== -->
-  <!-- ====== SUPPORT REQUEST SECTION ====== -->
-  <!-- ===================================== -->
-  <div id="SUP" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Support Request</h3>
-        </div>
-        <!-- Page Introduction -->
-        <div class="col-md-8">
-          <h4>Need Help with ESR Learning Management?</h4>
+          <!-- Accessing ESR -->
+          <h4>Accessing Manager/Supervisor Self Service</h4>
           <p>
-            If you couldn’t find the guidance you needed from this site,
-            please use the form below to reach out to the Learning &
-            Development team. We’ll aim to respond as soon as possible.
+            You’ll need an active ESR smartcard. If you don’t have one, contact:
+            <a href="mailto:scn-tr.esr_self_service@nhs.net">scn-tr.esr_self_service@nhs.net</a>
           </p>
-        </div>
-      </div>
-      <!-- Embedded Support Form -->
-      <div class="row mt-4">
-        <div class="col-md">
-          <div class="ratio ratio-4x3" style="max-width: 100%">
-            <iframe
-              src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsWOyxEjajBLZtrQAAAAAAAAAAAAa_eBfvaBUOU4zQ0wzV1IVOFkxM05SUK8yVkNBM1BWVS4u&embed=true"
-              allowfullscreen style="border: none">
-            </iframe>
-          </div>
+          <p>
+            If your smartcard is active but the Manager tab is missing, please reach out to the same helpdesk.
+          </p>
+          <p>
+            Refer to the <a href="[Insert link to MSS Access Flowchart]">MSS Access Flowchart</a> for guidance.
+          </p>
+          <p>
+            Visit <a href="https://my.esr.nhs.uk" target="_blank">my.esr.nhs.uk</a> and select “Log in with my Care
+            Identity.” Choose Smartcard when prompted.
+            <a href="[insert link to Welcome Page Smartcard Guide]">Smartcard login guide</a>
+          </p>
+          <p>
+            You can log in from home, but must first set this up on the secure Trust network.
+            <a href="[insert link to MSS Managing Internet Access]">Setup instructions</a>
+          </p>
+
+          <!-- Functionality Overview -->
+          <h4>What Can I Do in Manager Self Service?</h4>
+          <ul>
+            <li>View and change personal details (e.g. name)</li>
+            <li>View employment info (e.g. position number, contract dates, pay band)</li>
+            <li>Submit leaver details (non-retirement)</li>
+            <li>Submit change of hours</li>
+            <li>Update supervisor hierarchy</li>
+            <li>Run BI reports (training, staff lists, appraisals)</li>
+          </ul>
+
+          <!-- User Guides -->
+          <h4>Manager Self Service User Guides</h4>
+          <ul>
+            <li><a href="[link to MSS Manager Portal Overview]">Manager Portal Overview</a></li>
+            <li><a href="[link to MSS Accessing Employee Information]">Accessing Employee Information</a></li>
+            <li><a href="[Link to MSS Accessing Notifications]">Notifications & Email Setup</a></li>
+            <li><em>Actioning an Hours Change</em> – coming soon</li>
+            <li><a href="[Link to MSS Processing a Leaver]">Processing a Leaver</a></li>
+            <li><a href="[Link to MSS Supervisor_Hierarchy Change]">Supervisor & Hierarchy Changes</a></li>
+          </ul>
+          <p><strong>Note:</strong> National e-learning content is available via ESR. You must be logged in to access
+            it.</p>
+
+          <!-- Quick Help Topics -->
+          <h4>Quick Help Topics</h4>
+          <h5>Notifications</h5>
+          <ul>
+            <li>Managing notifications</li>
+            <li>Viewing and actioning email alerts</li>
+          </ul>
+
+          <h5>Supervisor Hierarchy</h5>
+          <ul>
+            <li>Assigning a new manager</li>
+            <li>Assigning direct reports</li>
+            <li>Viewing your Organisation Chart</li>
+            <li>Creating and managing Additional Supervisors</li>
+          </ul>
+
+          <h5>Managing Team Personal Info</h5>
+          <ul>
+            <li>Updating employee name</li>
+            <li>Recording phone number</li>
+            <li>Updating address</li>
+            <li>Adding emergency contact details</li>
+          </ul>
+
+          <h5>Managing Team Assignment Info</h5>
+          <ul>
+            <li>Viewing employment info</li>
+            <li>Actioning working hours change</li>
+            <li>Processing a leaver</li>
+            <li>Ending a non-primary assignment</li>
+          </ul>
+
+          <h5>Reporting</h5>
+          <ul>
+            <li>Viewing the standard dashboard in ESR BI</li>
+          </ul>
+
+          <!-- FAQs -->
+          <h4>FAQs</h4>
+          <details>
+            <summary>Do I need a smartcard to log in?</summary>
+            <p>Yes. Username/password login is not supported for Manager Self Service. Contact <a
+                href="mailto:scn-tr.esr_self_service@nhs.net">the helpdesk</a> if needed.</p>
+          </details>
+          <details>
+            <summary>Why am I getting a future dated change error?</summary>
+            <p>There’s already a future change in the system. You can’t select an earlier effective date. Contact the
+              helpdesk for support.</p>
+          </details>
+          <details>
+            <summary>How do I make changes for someone with multiple assignments?</summary>
+            <p>Double-check assignment details and collaborate with other managers if needed. Ensure correct assignment
+              is selected.</p>
+          </details>
+          <details>
+            <summary>I’ve just become a manager—how do I get access?</summary>
+            <p>Contact <a href="mailto:scn-tr.esr_self_service@nhs.net">the ESR Self Service Team</a> to request access.
+            </p>
+          </details>
+          <details>
+            <summary>What’s the difference between Supervisor and Additional Supervisor?</summary>
+            <p>
+              Supervisors are line managers. Additional Supervisors are added when another colleague needs access (e.g.
+              for appraisals). Avoid adding senior managers already in the hierarchy to prevent loop errors.
+            </p>
+          </details>
+
+          <!-- Support -->
+          <h4>Further Support</h4>
+          <p>
+            For any questions or technical issues, contact the ESR Self Service Helpdesk:
+            <a href="mailto:scn-tr.esr_self_service@nhs.net">scn-tr.esr_self_service@nhs.net</a>
+          </p>
         </div>
       </div>
     </div>
