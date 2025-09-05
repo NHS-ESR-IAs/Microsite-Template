@@ -71,151 +71,153 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
     <!-- ================================= -->
     <!-- ====== MAIN NAVIGATION BAR ====== -->
     <!-- ================================= -->
-    <nav class="navbar navbar-expand-lg mt-3">
-      <div class="container">
-        <!-- Button for toggling the menu on mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <div id="desktop-nav-toolbar">
+      <nav class="navbar navbar-expand-lg mt-3">
+        <div class="container">
+          <!-- Button for toggling the menu on mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- Menu container -->
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav mx-auto">
-            <!-- ==== ADD A SINGLE SECTION ==== -->
-            <!-- To add a new section (simple link), copy and update one of the lines below -->
-            <li class="nav-item">
-              <a class="nav-link" onclick="showPage('home')">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" onclick="showPage('guides')">Guides</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" onclick="showPage('faqs')">FAQs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" onclick="showPage('SUP')">Support Request</a>
-            </li>
+          <!-- Menu container -->
+          <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav mx-auto">
+              <!-- ==== ADD A SINGLE SECTION ==== -->
+              <!-- To add a new section (simple link), copy and update one of the lines below -->
+              <li class="nav-item">
+                <a class="nav-link" onclick="showPage('home')">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="showPage('guides')">Guides</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="showPage('faqs')">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="showPage('SUP')">Support Request</a>
+              </li>
 
-            <!-- ==== ADD A DROPDOWN MENU ==== -->
-            <!-- To create a dropdown menu, use this structure -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                onclick="showPage('CC')">Catalogue</a>
-              <ul class="dropdown-menu">
-                <!-- ==== ADD A NORMAL DROPDOWN ITEM ==== -->
-                <!-- Each dropdown item below links to a page -->
-                <li>
-                  <a class="dropdown-item" onclick="showPage('SaMT')">Statutory and Mandatory Training</a>
-                </li>
+              <!-- ==== ADD A DROPDOWN MENU ==== -->
+              <!-- To create a dropdown menu, use this structure -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                  onclick="showPage('CC')">Catalogue</a>
+                <ul class="dropdown-menu">
+                  <!-- ==== ADD A NORMAL DROPDOWN ITEM ==== -->
+                  <!-- Each dropdown item below links to a page -->
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('SaMT')">Statutory and Mandatory Training</a>
+                  </li>
 
-                <!-- ==== ADD A SUBMENU ==== -->
-                <!-- To add a submenu (nested within dropdown), use this structure -->
-                <li class="dropdown-submenu">
-                  <a class="dropdown-item submenu-toggle" href="#" onclick="showPage('NSMT')">Non Statutory and
-                    Mandatory Training</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" onclick="showPage('NSaMT1')">eLearning Modules</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" onclick="showPage('NSaMT2')">Workshops</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" onclick="showPage('NSaMT3')">Coaching Sessions</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- ==== END SUBMENU ==== -->
-              </ul>
-            </li>
-            <!-- ==== END DROPDOWN MENU ==== -->
-            <details class="mobile-toolbar d-sm-none mt-3">
-              <summary class="btn btn-outline-secondary w-100">
-                Search & Settings
-              </summary>
-              <div class="p-2">
-                <input type="text" id="searchInputMobileToolbar" class="form-control mb-2" placeholder="Search the site"
-                  onkeyup="searchPages(this.value)" />
-                <select id="themeSelectorSidebar" class="form-select form-select-sm mb-2 theme-selector"
-                  aria-label="Choose Theme" onchange="applyTheme(this.value)">
-                  <option value="blue">NHS Blue</option>
-                  <option value="green">NHS Green</option>
-                  <option value="grey">NHS Grey</option>
-                  <option value="pink">NHS Pink</option>
-                  <option value="purple">NHS Purple</option>
-                  <option value="red">NHS Red</option>
-                  <option value="yellow">NHS Yellow</option>
-                  <option value="calm">Light Grey</option>
-                  <option value="contrast">High Contrast</option>
-                </select>
-                <div class="btn-group btn-group-sm w-100 mb-2" role="group">
-                  <button onclick="setTextSize('scale-small')" class="btn btn-outline-secondary">
-                    A-
-                  </button>
-                  <button onclick="setTextSize('scale-medium')" class="btn btn-outline-secondary">
-                    A
-                  </button>
-                  <button onclick="setTextSize('scale-large')" class="btn btn-outline-secondary">
-                    A+
+                  <!-- ==== ADD A SUBMENU ==== -->
+                  <!-- To add a submenu (nested within dropdown), use this structure -->
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item submenu-toggle" href="#" onclick="showPage('NSMT')">Non Statutory and
+                      Mandatory Training</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" onclick="showPage('NSaMT1')">eLearning Modules</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" onclick="showPage('NSaMT2')">Workshops</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" onclick="showPage('NSaMT3')">Coaching Sessions</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- ==== END SUBMENU ==== -->
+                </ul>
+              </li>
+              <!-- ==== END DROPDOWN MENU ==== -->
+              <details class="mobile-toolbar d-sm-none mt-3">
+                <summary class="btn btn-outline-secondary w-100">
+                  Search & Settings
+                </summary>
+                <div class="p-2">
+                  <input type="text" id="searchInputMobileToolbar" class="form-control mb-2"
+                    placeholder="Search the site" onkeyup="searchPages(this.value)" />
+                  <select id="themeSelectorSidebar" class="form-select form-select-sm mb-2 theme-selector"
+                    aria-label="Choose Theme" onchange="applyTheme(this.value)">
+                    <option value="blue">NHS Blue</option>
+                    <option value="green">NHS Green</option>
+                    <option value="grey">NHS Grey</option>
+                    <option value="pink">NHS Pink</option>
+                    <option value="purple">NHS Purple</option>
+                    <option value="red">NHS Red</option>
+                    <option value="yellow">NHS Yellow</option>
+                    <option value="calm">Light Grey</option>
+                    <option value="contrast">High Contrast</option>
+                  </select>
+                  <div class="btn-group btn-group-sm w-100 mb-2" role="group">
+                    <button onclick="setTextSize('scale-small')" class="btn btn-outline-secondary">
+                      A-
+                    </button>
+                    <button onclick="setTextSize('scale-medium')" class="btn btn-outline-secondary">
+                      A
+                    </button>
+                    <button onclick="setTextSize('scale-large')" class="btn btn-outline-secondary">
+                      A+
+                    </button>
+                  </div>
+                  <button class="btn btn-sm btn-outline-primary w-100 toggle-dark" onclick="toggleDarkMode()">
+                    Dark Mode
                   </button>
                 </div>
-                <button class="btn btn-sm btn-outline-primary w-100 toggle-dark" onclick="toggleDarkMode()">
-                  Dark Mode
+              </details>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- ======================================== -->
+      <!-- ====== TOOLBAR: SEARCH + SETTINGS ====== -->
+      <!-- ======================================== -->
+      <!-- Collapsible Toolbar -->
+
+      <div class="container mt-3 d-none d-sm-block desktop-toolbar">
+        <div class="row align-items-center g-2">
+          <!-- Site Search -->
+          <div class="col">
+            <input id="searchInputToolbar" class="form-control" placeholder="Search the site"
+              onkeyup="searchPages(this.value)" onkeyup="searchPages(this.value)" />
+          </div>
+          <!-- Theme & Accessibility Controls -->
+          <div class="col-auto">
+            <div class="control-toolbar d-flex flex-wrap gap-2 p-2 rounded">
+              <!-- Theme Selector -->
+              <select id="themeSelectorSidebar" class="form-select form-select-sm w-auto theme-selector"
+                aria-label="Choose Theme" onchange="applyTheme(this.value)">
+                <option value="blue">NHS Blue</option>
+                <option value="green">NHS Green</option>
+                <option value="grey">NHS Grey</option>
+                <option value="pink">NHS Pink</option>
+                <option value="purple">NHS Purple</option>
+                <option value="red">NHS Red</option>
+                <option value="yellow">NHS Yellow</option>
+                <option value="calm">Light Grey</option>
+                <option value="contrast">High Contrast</option>
+              </select>
+              <!-- Text Size Buttons -->
+              <div class="btn-group btn-group-sm" role="group" aria-label="Text Size">
+                <button onclick="setTextSize('scale-small')" class="btn btn-outline-secondary">
+                  A-
+                </button>
+                <button onclick="setTextSize('scale-medium')" class="btn btn-outline-secondary">
+                  A
+                </button>
+                <button onclick="setTextSize('scale-large')" class="btn btn-outline-secondary">
+                  A+
+                </button>
+                <button onclick="setTextSize('scale-xlarge')" class="btn btn-outline-secondary">
+                  A++
                 </button>
               </div>
-            </details>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- ======================================== -->
-    <!-- ====== TOOLBAR: SEARCH + SETTINGS ====== -->
-    <!-- ======================================== -->
-    <!-- Collapsible Toolbar -->
-
-    <div class="container mt-3 d-none d-sm-block desktop-toolbar">
-      <div class="row align-items-center g-2">
-        <!-- Site Search -->
-        <div class="col">
-          <input id="searchInputToolbar" class="form-control" placeholder="Search the site"
-            onkeyup="searchPages(this.value)" onkeyup="searchPages(this.value)" />
-        </div>
-        <!-- Theme & Accessibility Controls -->
-        <div class="col-auto">
-          <div class="control-toolbar d-flex flex-wrap gap-2 p-2 rounded">
-            <!-- Theme Selector -->
-            <select id="themeSelectorSidebar" class="form-select form-select-sm w-auto theme-selector"
-              aria-label="Choose Theme" onchange="applyTheme(this.value)">
-              <option value="blue">NHS Blue</option>
-              <option value="green">NHS Green</option>
-              <option value="grey">NHS Grey</option>
-              <option value="pink">NHS Pink</option>
-              <option value="purple">NHS Purple</option>
-              <option value="red">NHS Red</option>
-              <option value="yellow">NHS Yellow</option>
-              <option value="calm">Light Grey</option>
-              <option value="contrast">High Contrast</option>
-            </select>
-            <!-- Text Size Buttons -->
-            <div class="btn-group btn-group-sm" role="group" aria-label="Text Size">
-              <button onclick="setTextSize('scale-small')" class="btn btn-outline-secondary">
-                A-
-              </button>
-              <button onclick="setTextSize('scale-medium')" class="btn btn-outline-secondary">
-                A
-              </button>
-              <button onclick="setTextSize('scale-large')" class="btn btn-outline-secondary">
-                A+
-              </button>
-              <button onclick="setTextSize('scale-xlarge')" class="btn btn-outline-secondary">
-                A++
+              <!-- Dark Mode Toggle -->
+              <button class="btn btn-sm btn-outline-primary toggle-dark" onclick="toggleDarkMode()">
+                Dark Mode
               </button>
             </div>
-            <!-- Dark Mode Toggle -->
-            <button class="btn btn-sm btn-outline-primary toggle-dark" onclick="toggleDarkMode()">
-              Dark Mode
-            </button>
           </div>
         </div>
       </div>
