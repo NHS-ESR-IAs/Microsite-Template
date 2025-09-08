@@ -162,6 +162,10 @@ body.scale-xlarge .btn-primary {
   display: block;
 }
 
+.dropdown-menu>li:hover>.submenu {
+  display: block;
+}
+
 /*Breadcrumb*/
 .breadcrumb {
   background: transparent;
