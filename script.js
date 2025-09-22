@@ -141,31 +141,27 @@ document.querySelectorAll(".toggle-submenu").forEach((button) => {
   });
 });
 
-// ===== Shrink on Scroll ====
+// ===== Instant Collapse on Scroll Start =====
 
-window.addEventListener("scroll", function () {
-  const banner = document.querySelector(".banner-wrapper");
-  if (window.scrollY > 50) {
-    banner.classList.add("shrink");
-  } else {
-    banner.classList.remove("shrink");
-  }
-});
-
-let isHidden = false;
+const banner = document.querySelector(".banner-wrapper");
 const toolbar = document.getElementById("desktop-nav-toolbar");
 const header = document.querySelector(".nhs-header");
 
-window.addEventListener("scroll", function () {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+let isCollapsed = false;
 
-  if (scrollTop > 150 && !isHidden) {
-    toolbar?.classList.add("hide-on-scroll");
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // Buffer zone: collapse if scrollY > 30, expand only if scrollY < 10
+  if (scrollY > 1 && !isCollapsed) {
+    banner?.classList.add("shrink");
     header?.classList.add("shrink");
-    isHidden = true;
-  } else if (scrollTop < 50 && isHidden) {
-    toolbar?.classList.remove("hide-on-scroll");
+    toolbar?.classList.add("hide-on-scroll");
+    isCollapsed = true;
+  } else if (scrollY < 1 && isCollapsed) {
+    banner?.classList.remove("shrink");
     header?.classList.remove("shrink");
-    isHidden = false;
+    toolbar?.classList.remove("hide-on-scroll");
+    isCollapsed = false;
   }
 });

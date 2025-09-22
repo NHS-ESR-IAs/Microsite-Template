@@ -1951,30 +1951,26 @@ body.dark-mode .control-toolbar {
   z-index: 100;
 }
 
-
 /* shrink on scroll */
-
-/* Hero Banner Container */
+/* 🧱 Hero Banner Container */
 .banner-wrapper {
   position: relative;
   height: 300px;
-  transition: height 0.4s ease;
   overflow: hidden;
 }
 
-/* Shrink on scroll */
 .banner-wrapper.shrink {
   height: 120px;
 }
 
-/* Banner Image */
+/* 🖼️ Banner Image */
 .Banner_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Overlay Text */
+/* 📝 Overlay Text */
 .banner-text-overlay {
   position: absolute;
   bottom: 1rem;
@@ -1982,12 +1978,9 @@ body.dark-mode .control-toolbar {
   text-align: left;
   z-index: 2;
   color: var(--bs-light);
-  /* Uses Bootstrap theme variable */
   padding: 0.5rem 1rem;
   background: rgba(0, 0, 0, 0.4);
-  /* Optional: subtle contrast */
   border-radius: 0.25rem;
-  transition: font-size 0.4s ease;
 }
 
 .banner-text-overlay h1 {
@@ -1999,8 +1992,8 @@ body.dark-mode .control-toolbar {
   font-size: 1.2rem;
 }
 
+/* 🧰 Desktop Toolbar */
 .desktop-toolbar {
-  transition: all 0.4s ease;
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -2010,26 +2003,28 @@ body.dark-mode .control-toolbar {
   display: none !important;
 }
 
-/* Header shrink */
+/* 🧠 Header Shrink */
 .nhs-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* Ensure it stays above other content */
   background-color: var(--bs-light);
-  /* Or your theme’s header background */
-  transition: height 0.3s ease;
-  height: auto;
   min-height: 100px;
+  overflow: hidden;
+  /* Prevent content spill during collapse */
 }
 
 .nhs-header.shrink {
   min-height: 60px;
 }
 
-/* Toolbar collapse */
+.nhs-header,
+.banner-wrapper {
+  will-change: min-height;
+}
+
+/* 🧭 Toolbar Collapse */
 #desktop-nav-toolbar {
-  transition: opacity 0.3s ease;
   opacity: 1;
   display: block;
 }
@@ -2037,4 +2032,4 @@ body.dark-mode .control-toolbar {
 #desktop-nav-toolbar.hide-on-scroll {
   opacity: 0;
   display: none;
-  /* Fully removes from layout flow */
+}
