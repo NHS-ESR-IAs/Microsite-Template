@@ -37,7 +37,7 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
     <!-- ==== ADD A SINGLE SECTION ==== -->
     <!-- To add a new section (simple link), copy and update one of the lines below -->
     <li class="nav-item">
-      <a class="nav-link" onclick="showPage('home')">Home 'ello</a>
+      <a class="nav-link" onclick="showPage('home')">Home</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" onclick="showPage('guides')">Guides and Supporting Documentation</a>
@@ -2118,61 +2118,64 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
   <!-- ============ Page Code ============== -->
   <!-- ===================================== -->
 
+
+
+
   <div id="PageCode" class="page">
 
     <div class="container">
       <div class="row">
         <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center text-start"></div>
-        <h3 class="gradient-text">Page Code</h3>
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center text-start">
+          <h3 class="gradient-text">Page Code</h3>
+        </div>
+
+        <!-- Page Introduction -->
+        <div class="col-md-8">
+          <p>This page scaffold is your layout launcher—perfect for building modular, theme-safe microsite pages with
+            expressive sidebars, warm introductions, and full-width content zones. It’s the dohicky behind the
+            dohickies.</p>
+
+          <ul>
+            <li>🧱 Modular and reusable—drop in any snippet, layout, or onboarding flow</li>
+            <li>🎨 Theme-safe and layout-friendly—harmonises across microsites</li>
+            <li>🧼 Keeps structure clean, scannable, and contributor-first</li>
+            <li>🧩 Supports gradient sidebars, intro blocks, and full-width content zones</li>
+          </ul>
+
+          <p>Use it to say “Here’s a role card page,” “This one’s for tip boxes,” or “Let’s build a dohicky
+            dashboard”—whatever sparks clarity and modular joy.</p>
+        </div>
       </div>
 
-      <!-- Page Introduction -->
-      <div class="col-md-8">
-        <p>This page scaffold is your layout launcher—perfect for building modular, theme-safe microsite pages with
-          expressive sidebars, warm introductions, and full-width content zones. It’s the dohicky behind the
-          dohickies.</p>
+      <!-- Page full width content -->
+      <div class="row mt-4">
+        <div class="col-md">
+          <h5 class="mt-4 mb-2">🧱 Page Scaffold Panel: Build with Clarity</h5>
+          <ul>
+            <li><strong>Set the page ID:</strong> Replace <code>#</code> in <code>&lt;div id="#" class="page"&gt;</code>
+              with a unique, descriptive ID like <code>FactBox</code>, <code>TipBox</code>, or <code>RoleCard</code>.
+            </li>
+            <li><strong>Update the title:</strong> Change the sidebar heading
+              <code>&lt;h3 class="gradient-text"&gt;#&lt;/h3&gt;</code> to match your snippet name—this anchors the page
+              visually.
+            </li>
+            <li><strong>Write your intro:</strong> Use the <code>&lt;p&gt;</code> and <code>&lt;ul&gt;</code> blocks to
+              explain what the snippet does, why it matters, and how contributors can use it.</li>
+            <li><strong>Drop in your snippet:</strong> Paste the dohicky code into the full-width section below—this is
+              where the magic lives.</li>
+            <li><strong>Style it safely:</strong> Use theme-safe classes like <code>gradient-col</code>,
+              <code>bg-light</code>, <code>rounded</code>, or <code>shadow-sm</code> to harmonise with your microsite.
+            </li>
+            <li><strong>Optional:</strong> Add a second full-width section for advanced usage, variations, or carousel
+              layouts.</li>
+          </ul>
+          <p>This panel is the launchpad for every snippet page—modular, expressive, and ready to empower contributors
+            with clarity and joy.</p>
 
-        <ul>
-          <li>🧱 Modular and reusable—drop in any snippet, layout, or onboarding flow</li>
-          <li>🎨 Theme-safe and layout-friendly—harmonises across microsites</li>
-          <li>🧼 Keeps structure clean, scannable, and contributor-first</li>
-          <li>🧩 Supports gradient sidebars, intro blocks, and full-width content zones</li>
-        </ul>
-
-        <p>Use it to say “Here’s a role card page,” “This one’s for tip boxes,” or “Let’s build a dohicky
-          dashboard”—whatever sparks clarity and modular joy.</p>
-      </div>
-    </div>
-
-    <!-- Page full width content -->
-    <div class="row mt-4">
-      <div class="col-md">
-        <h5 class="mt-4 mb-2">🧱 Page Scaffold Panel: Build with Clarity</h5>
-        <ul>
-          <li><strong>Set the page ID:</strong> Replace <code>#</code> in <code>&lt;div id="#" class="page"&gt;</code>
-            with a unique, descriptive ID like <code>FactBox</code>, <code>TipBox</code>, or <code>RoleCard</code>.
-          </li>
-          <li><strong>Update the title:</strong> Change the sidebar heading
-            <code>&lt;h3 class="gradient-text"&gt;#&lt;/h3&gt;</code> to match your snippet name—this anchors the page
-            visually.
-          </li>
-          <li><strong>Write your intro:</strong> Use the <code>&lt;p&gt;</code> and <code>&lt;ul&gt;</code> blocks to
-            explain what the snippet does, why it matters, and how contributors can use it.</li>
-          <li><strong>Drop in your snippet:</strong> Paste the dohicky code into the full-width section below—this is
-            where the magic lives.</li>
-          <li><strong>Style it safely:</strong> Use theme-safe classes like <code>gradient-col</code>,
-            <code>bg-light</code>, <code>rounded</code>, or <code>shadow-sm</code> to harmonise with your microsite.
-          </li>
-          <li><strong>Optional:</strong> Add a second full-width section for advanced usage, variations, or carousel
-            layouts.</li>
-        </ul>
-        <p>This panel is the launchpad for every snippet page—modular, expressive, and ready to empower contributors
-          with clarity and joy.</p>
-
-        <p>This panel is the launchpad for every snippet page—modular, expressive, and ready to empower contributors
-          with clarity and joy.</p>
-        <pre><code id="pageCodeSnippet" class="language-html">
+          <p>This panel is the launchpad for every snippet page—modular, expressive, and ready to empower contributors
+            with clarity and joy.</p>
+          <pre><code id="pageCodeSnippet" class="language-html">
 &lt;!-- ===================================== --&gt;
 &lt;!-- ============= PAGE NAME ============= --&gt;
 &lt;!-- ===================================== --&gt;
@@ -2203,79 +2206,78 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
 &lt;/div&gt;
         </code></pre>
 
+        </div>
       </div>
     </div>
-  </div>
   </div>
   <!-- ===================================== -->
   <!-- ===== Open New Page Button ========= -->
   <!-- ===================================== -->
 
   <div id="OpenNewPageButton" class="page">
-
     <div class="container">
       <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center text-start"></div>
-        <h3 class="gradient-text">Open New Page Button</h3>
+        <!-- Sidebar Gradient Title -->
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center text-start">
+          <h3 class="gradient-text">Open New Page Button</h3>
+        </div>
+        <!-- Main Welcome Text -->
+        <div class="col-md-8">
+
+          <p>This button is your microsite’s modular navigator—perfect for launching snippet pages, onboarding flows, or
+            dohicky dashboards with clarity and ease. It’s expressive, accessible, and contributor-friendly.</p>
+
+          <ul>
+            <li>🧭 Great for linking to snippet pages like <code>FactBox</code>, <code>TipBox</code>, or
+              <code>RoleCard</code>
+            </li>
+            <li>🧱 Modular and stackable—drop into grids, menus, or onboarding flows</li>
+            <li>🎨 Theme-safe and layout-friendly—styled with <code>btn-primary</code> and <code>w-100</code> for
+              full-width clarity</li>
+            <li>🧼 Keeps navigation clean, scannable, and contributor-first</li>
+          </ul>
+
+          <p>Use it to say “Open the Tip Box page,” “Launch the Accessibility Flag panel,” or “Explore the Dohicky
+            Grid”—whatever sparks modular joy and onboarding clarity.</p>
+        </div>
       </div>
 
-      <!-- Page Introduction -->
-      <div class="col-md-8">
-        <p>This button is your microsite’s modular navigator—perfect for launching snippet pages, onboarding flows, or
-          dohicky dashboards with clarity and ease. It’s expressive, accessible, and contributor-friendly.</p>
+      <!-- Page full width content -->
+      <div class="row mt-4">
+        <div class="col-md">
 
-        <ul>
-          <li>🧭 Great for linking to snippet pages like <code>FactBox</code>, <code>TipBox</code>, or
-            <code>RoleCard</code>
-          </li>
-          <li>🧱 Modular and stackable—drop into grids, menus, or onboarding flows</li>
-          <li>🎨 Theme-safe and layout-friendly—styled with <code>btn-primary</code> and <code>w-100</code> for
-            full-width clarity</li>
-          <li>🧼 Keeps navigation clean, scannable, and contributor-first</li>
-        </ul>
+          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('FactBox')">📦 Fact Box</button>
+          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('TipBox')">🛠 Tip Box</button>
+          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('RoleCard')">🧑‍💻 Role Card</button>
+          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('AccessibilityFlag')">♿ Accessibility
+            Flag</button>
 
-        <p>Use it to say “Open the Tip Box page,” “Launch the Accessibility Flag panel,” or “Explore the Dohicky
-          Grid”—whatever sparks modular joy and onboarding clarity.</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Page full width content -->
-    <div class="row mt-4">
-      <div class="col-md">
-
-        <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('FactBox')">📦 Fact Box</button>
-        <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('TipBox')">🛠 Tip Box</button>
-        <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('RoleCard')">🧑‍💻 Role Card</button>
-        <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('AccessibilityFlag')">♿ Accessibility
-          Flag</button>
-
-      </div>
-    </div>
-
-    <div class="row mt-4">
-      <div class="col-md">
-        <h5 class="mt-4 mb-2">🧭 Open New Page Button Panel: Navigate with Joy</h5>
-        <ul>
-          <li><strong>Change the label:</strong> Replace <code>#</code> with the button text—e.g.
-            <code>📦 Fact Box</code>, <code>🛠 Tip Box</code>, or <code>🧩 Dohicky Grid</code>.
-          </li>
-          <li><strong>Set the target:</strong> Replace <code>ID</code> in <code>showPage('ID')</code> with the unique
-            ID of the page you want to open.</li>
-          <li><strong>Style it safely:</strong> Use theme-safe classes like <code>btn-primary</code>,
-            <code>w-100</code>, <code>text-start</code>, or <code>mb-2</code> to harmonise with your microsite.
-          </li>
-          <li><strong>Make it modular:</strong> Stack buttons in a grid, sidebar, or dohicky dashboard to guide
-            contributors with clarity.</li>
-          <li><strong>Optional:</strong> Add emojis, icons, or hover effects to make navigation expressive and joyful.
-          </li>
-        </ul>
-        <pre><code id="openPageButtonSnippet" class="language-html">
+      <div class="row mt-4">
+        <div class="col-md">
+          <h5 class="mt-4 mb-2">🧭 Open New Page Button Panel: Navigate with Joy</h5>
+          <ul>
+            <li><strong>Change the label:</strong> Replace <code>#</code> with the button text—e.g.
+              <code>📦 Fact Box</code>, <code>🛠 Tip Box</code>, or <code>🧩 Dohicky Grid</code>.
+            </li>
+            <li><strong>Set the target:</strong> Replace <code>ID</code> in <code>showPage('ID')</code> with the unique
+              ID of the page you want to open.</li>
+            <li><strong>Style it safely:</strong> Use theme-safe classes like <code>btn-primary</code>,
+              <code>w-100</code>, <code>text-start</code>, or <code>mb-2</code> to harmonise with your microsite.
+            </li>
+            <li><strong>Make it modular:</strong> Stack buttons in a grid, sidebar, or dohicky dashboard to guide
+              contributors with clarity.</li>
+            <li><strong>Optional:</strong> Add emojis, icons, or hover effects to make navigation expressive and joyful.
+            </li>
+          </ul>
+          <pre><code id="openPageButtonSnippet" class="language-html">
 &lt;button class=&quot;btn btn-primary w-100 text-start mb-2&quot; onclick=&quot;showPage('FactBox')&quot;&gt;📦 Fact Box&lt;/button&gt;
         </code></pre>
+        </div>
       </div>
     </div>
-  </div>
   </div>
   <!-- ===================================== -->
   <!-- ===== Pop-Out Page Button ========== -->
