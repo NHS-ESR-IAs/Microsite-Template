@@ -790,6 +790,7 @@ body.light-theme .close-button {
   padding: 40px;
   background-color: white;
   max-width: 1200px;
+  height: 100%;
   margin: 20px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -953,6 +954,21 @@ body.theme-blue.dark-mode .theme-muted {
   /* Muted steel blue */
 }
 
+body.theme-blue .did-you-know {
+  background-color: #e6f0fa;
+  border-left: 4px solid #0072ce;
+  color: #1a1a1a;
+  padding: 1em;
+  margin: 1em 0;
+  font-family: sans-serif;
+}
+
+body.theme-blue.dark-mode .did-you-know {
+  background-color: #162b3d;
+  border-left: 4px solid #41b6e6;
+  color: #f0f8ff;
+}
+
 /* ============ CALM GREY ============ */
 body.theme-calm {
   background-color: #f2f2f2;
@@ -1064,6 +1080,21 @@ body.theme-calm.dark-mode .theme-muted {
   /* Muted tone for subtle emphasis */
 }
 
+body.theme-calm .did-you-know {
+  background-color: #f2f2f2;
+  border-left: 4px solid #4c4c4c;
+  color: #2a2a2a;
+  padding: 1em;
+  margin: 1em 0;
+  font-family: sans-serif;
+}
+
+body.theme-calm.dark-mode .did-you-know {
+  background-color: #2b2b2b;
+  border-left: 4px solid #888888;
+  color: #f2f2f2;
+}
+
 /* ============ NHS GREEN ============ */
 body.theme-green {
   background-color: #e9f5ee;
@@ -1143,6 +1174,21 @@ body.theme-green.dark-mode .theme-heading {
 body.theme-green.dark-mode .theme-muted {
   color: #99cbb1;
   /* Gentle green-grey for muted text */
+}
+
+body.theme-green .did-you-know {
+  background-color: #e9f5ee;
+  border-left: 4px solid #007f3b;
+  color: #1a1a1a;
+  padding: 1em;
+  margin: 1em 0;
+  font-family: sans-serif;
+}
+
+body.theme-green.dark-mode .did-you-know {
+  background-color: #003d29;
+  border-left: 4px solid #33a36a;
+  color: #e0f6eb;
 }
 
 /* ============ NHS PURPLE ============ */
@@ -1234,6 +1280,21 @@ body.theme-purple.dark-mode .theme-muted {
   /* Muted lilac for subtle emphasis */
 }
 
+body.theme-purple .did-you-know {
+  background-color: #f3f0f9;
+  border-left: 4px solid #5e2a84;
+  color: #1a1a1a;
+  padding: 1em;
+  margin: 1em 0;
+  font-family: sans-serif;
+}
+
+body.theme-purple.dark-mode .did-you-know {
+  background-color: #290f4d;
+  border-left: 4px solid #9d70c7;
+  color: #f0eaff;
+}
+
 /* ============ NHS GREY ============ */
 body.theme-grey {
   background-color: #f4f4f4;
@@ -1322,6 +1383,21 @@ body.theme-grey.dark-mode .theme-heading {
 body.theme-grey.dark-mode .theme-muted {
   color: #aab6be;
   /* Muted silver-blue for subtle emphasis */
+}
+
+body.theme-grey .did-you-know {
+  background-color: #f4f4f4;
+  border-left: 4px solid #768692;
+  color: #1a1a1a;
+  padding: 1em;
+  margin: 1em 0;
+  font-family: sans-serif;
+}
+
+body.theme-grey.dark-mode .did-you-know {
+  background-color: #353c42;
+  border-left: 4px solid #a3afb7;
+  color: #f0f4f7;
 }
 
 /* ============ NHS YELLOW ============ */
@@ -1428,6 +1504,21 @@ body.theme-yellow.dark-mode .theme-muted {
   /* Muted wheat tone for subtle emphasis */
 }
 
+body.theme-yellow .did-you-know {
+  background-color: #fffde7;
+  border-left: 4px solid #fdd835;
+  color: #1a1a1a;
+  padding: 1em;
+  margin: 1em 0;
+  font-family: sans-serif;
+}
+
+body.theme-yellow.dark-mode .did-you-know {
+  background-color: #3a3500;
+  border-left: 4px solid #fff176;
+  color: #fffce0;
+}
+
 /* ============ NHS RED ============ */
 body.theme-red {
   background-color: #fff6f6;
@@ -1519,6 +1610,21 @@ body.theme-red.dark-mode .theme-heading {
 body.theme-red.dark-mode .theme-muted {
   color: #dca6a2;
   /* Muted blush for gentle emphasis */
+}
+
+body.theme-red .did-you-know {
+  background-color: #fff6f6;
+  border-left: 4px solid #aa1c17;
+  color: #1a1a1a;
+  padding: 1em;
+  margin: 1em 0;
+  font-family: sans-serif;
+}
+
+body.theme-red.dark-mode .did-you-know {
+  background-color: #3a1816;
+  border-left: 4px solid #ffb0a8;
+  color: #fff1f1;
 }
 
 /* ============ NHS PINK ============ */
@@ -1614,6 +1720,21 @@ body.theme-pink.dark-mode .theme-muted {
   /* Muted mauve for gentle emphasis */
 }
 
+body.theme-pink .did-you-know {
+  background-color: #fdf4f7;
+  border-left: 4px solid #5e1f42;
+  color: #1a1a1a;
+  padding: 1em;
+  margin: 1em 0;
+  font-family: sans-serif;
+}
+
+body.theme-pink.dark-mode .did-you-know {
+  background-color: #3c2432;
+  border-left: 4px solid #ffb3d1;
+  color: #ffeef6;
+}
+
 /* ============ HIGH CONTRAST ============ */
 body.theme-contrast {
   background-color: #000;
@@ -1668,6 +1789,16 @@ body.theme-contrast .theme-heading {
 body.theme-contrast .theme-muted {
   color: #cccccc;
   /* Soft grey for secondary emphasis */
+}
+
+body.theme-contrast .did-you-know {
+  background-color: #000;
+  border-left: 4px solid yellow;
+  color: #fff;
+  padding: 1em;
+  margin: 1em 0;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 /* ============================================================
@@ -2032,4 +2163,507 @@ body.dark-mode .control-toolbar {
 #desktop-nav-toolbar.hide-on-scroll {
   opacity: 0;
   display: none;
+}
+
+.did-you-know {
+  margin: 1em 0;
+  padding: 0.5em;
+  border-left: 4px solid #007f5f;
+  background: #f0fdf4;
+  font-family: sans-serif;
+}
+
+.did-you-know summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.shout-card {
+  padding: 1em;
+  margin: 1em 0;
+  font-family: sans-serif;
+  font-size: 1rem;
+  border-left: 5px solid var(--accent-color, #ff4081);
+  background: var(--bg-gradient, linear-gradient(90deg, #e0f7fa, #fce4ec));
+  color: var(--text-color, #1a1a1a);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* NHS Blue */
+body.theme-blue .shout-card {
+  --accent-color: #0072ce;
+  --bg-gradient: linear-gradient(90deg, #e6f0fa, #aad4ff);
+  --text-color: #003366;
+}
+
+/* NHS Green */
+body.theme-green .shout-card {
+  --accent-color: #007f3b;
+  --bg-gradient: linear-gradient(90deg, #e9f5ee, #ccefdc);
+  --text-color: #004d3c;
+}
+
+/* Calm Grey */
+body.theme-calm .shout-card {
+  --accent-color: #4c4c4c;
+  --bg-gradient: linear-gradient(90deg, #f2f2f2, #dcdcdc);
+  --text-color: #2a2a2a;
+}
+
+/* NHS Purple */
+body.theme-purple .shout-card {
+  --accent-color: #5e2a84;
+  --bg-gradient: linear-gradient(90deg, #f3f0f9, #e8d4ff);
+  --text-color: #3c1663;
+}
+
+/* NHS Grey */
+body.theme-grey .shout-card {
+  --accent-color: #425563;
+  --bg-gradient: linear-gradient(90deg, #f4f4f4, #dce1e4);
+  --text-color: #1a1a1a;
+}
+
+/* NHS Yellow */
+body.theme-yellow .shout-card {
+  --accent-color: #fdd835;
+  --bg-gradient: linear-gradient(90deg, #fffde7, #fff8c4);
+  --text-color: #1a1a1a;
+}
+
+/* NHS Red */
+body.theme-red .shout-card {
+  --accent-color: #aa1c17;
+  --bg-gradient: linear-gradient(90deg, #fff6f6, #ffd6d6);
+  --text-color: #1a1a1a;
+}
+
+/* NHS Pink */
+body.theme-pink .shout-card {
+  --accent-color: #5e1f42;
+  --bg-gradient: linear-gradient(90deg, #fdf4f7, #ffeef6);
+  --text-color: #1a1a1a;
+}
+
+/* High Contrast */
+body.theme-contrast .shout-card {
+  --accent-color: yellow;
+  --bg-gradient: linear-gradient(90deg, #000, #000);
+  --text-color: #fff;
+  font-weight: bold;
+}
+
+body.theme-blue.dark-mode .shout-card {
+  --accent-color: #ffcc00;
+  --bg-gradient: linear-gradient(90deg, #1e1e1e, #003366);
+  --text-color: #eee;
+}
+
+body.theme-green.dark-mode .shout-card {
+  --accent-color: #33a36a;
+  --bg-gradient: linear-gradient(90deg, #003d29, #00542a);
+  --text-color: #e0f6eb;
+}
+
+body.theme-calm.dark-mode .shout-card {
+  --accent-color: #888888;
+  --bg-gradient: linear-gradient(90deg, #2b2b2b, #444);
+  --text-color: #f2f2f2;
+}
+
+body.theme-purple.dark-mode .shout-card {
+  --accent-color: #9d70c7;
+  --bg-gradient: linear-gradient(90deg, #290f4d, #3c1663);
+  --text-color: #f0eaff;
+}
+
+body.theme-grey.dark-mode .shout-card {
+  --accent-color: #a3afb7;
+  --bg-gradient: linear-gradient(90deg, #353c42, #4a5964);
+  --text-color: #f0f4f7;
+}
+
+body.theme-yellow.dark-mode .shout-card {
+  --accent-color: #fff176;
+  --bg-gradient: linear-gradient(90deg, #3a3500, #ffee58);
+  --text-color: #fffce0;
+}
+
+body.theme-red.dark-mode .shout-card {
+  --accent-color: #ffb0a8;
+  --bg-gradient: linear-gradient(90deg, #3a1816, #aa1c17);
+  --text-color: #fff1f1;
+}
+
+body.theme-pink.dark-mode .shout-card {
+  --accent-color: #ffb3d1;
+  --bg-gradient: linear-gradient(90deg, #3c2432, #7c2855);
+  --text-color: #ffeef6;
+}
+
+/* 🧠 QUOTE BOX */
+.quote-box {
+  margin: 1em 0;
+  padding: 1em 1.25em;
+  font-family: sans-serif;
+  font-style: italic;
+  border-left: 4px solid var(--accent-color, #999);
+  background-color: var(--bg-color, #f9f9f9);
+  color: var(--text-color, #333);
+}
+
+.quote-box footer {
+  margin-top: 0.5em;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--accent-color, #666);
+}
+
+/* 📦 FACTBOX */
+.factbox {
+  margin: 1em 0;
+  padding: 1em;
+  font-family: sans-serif;
+  font-size: 1rem;
+  border-left: 4px solid var(--accent-color, #007f5f);
+  background-color: var(--bg-color, #f0fdf4);
+  color: var(--text-color, #222);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* NHS Blue */
+body.theme-blue .quote-box,
+body.theme-blue .factbox {
+  --accent-color: #0072ce;
+  --bg-color: #e6f0fa;
+  --text-color: #003366;
+}
+
+/* NHS Green */
+body.theme-green .quote-box,
+body.theme-green .factbox {
+  --accent-color: #007f3b;
+  --bg-color: #e9f5ee;
+  --text-color: #004d3c;
+}
+
+/* Calm Grey */
+body.theme-calm .quote-box,
+body.theme-calm .factbox {
+  --accent-color: #4c4c4c;
+  --bg-color: #f2f2f2;
+  --text-color: #2a2a2a;
+}
+
+/* NHS Purple */
+body.theme-purple .quote-box,
+body.theme-purple .factbox {
+  --accent-color: #5e2a84;
+  --bg-color: #f3f0f9;
+  --text-color: #3c1663;
+}
+
+/* NHS Grey */
+body.theme-grey .quote-box,
+body.theme-grey .factbox {
+  --accent-color: #425563;
+  --bg-color: #f4f4f4;
+  --text-color: #1a1a1a;
+}
+
+/* NHS Yellow */
+body.theme-yellow .quote-box,
+body.theme-yellow .factbox {
+  --accent-color: #fdd835;
+  --bg-color: #fffde7;
+  --text-color: #1a1a1a;
+}
+
+/* NHS Red */
+body.theme-red .quote-box,
+body.theme-red .factbox {
+  --accent-color: #aa1c17;
+  --bg-color: #fff6f6;
+  --text-color: #1a1a1a;
+}
+
+/* NHS Pink */
+body.theme-pink .quote-box,
+body.theme-pink .factbox {
+  --accent-color: #5e1f42;
+  --bg-color: #fdf4f7;
+  --text-color: #1a1a1a;
+}
+
+/* High Contrast */
+body.theme-contrast .quote-box,
+body.theme-contrast .factbox {
+  --accent-color: yellow;
+  --bg-color: #000;
+  --text-color: #fff;
+  font-weight: bold;
+}
+
+body.theme-blue.dark-mode .quote-box,
+body.theme-blue.dark-mode .factbox {
+  --accent-color: #ffcc00;
+  --bg-color: #1e1e1e;
+  --text-color: #eee;
+}
+
+body.theme-green.dark-mode .quote-box,
+body.theme-green.dark-mode .factbox {
+  --accent-color: #33a36a;
+  --bg-color: #003d29;
+  --text-color: #e0f6eb;
+}
+
+body.theme-calm.dark-mode .quote-box,
+body.theme-calm.dark-mode .factbox {
+  --accent-color: #888888;
+  --bg-color: #2b2b2b;
+  --text-color: #f2f2f2;
+}
+
+body.theme-purple.dark-mode .quote-box,
+body.theme-purple.dark-mode .factbox {
+  --accent-color: #9d70c7;
+  --bg-color: #290f4d;
+  --text-color: #f0eaff;
+}
+
+body.theme-grey.dark-mode .quote-box,
+body.theme-grey.dark-mode .factbox {
+  --accent-color: #a3afb7;
+  --bg-color: #353c42;
+  --text-color: #f0f4f7;
+}
+
+body.theme-yellow.dark-mode .quote-box,
+body.theme-yellow.dark-mode .factbox {
+  --accent-color: #fff176;
+  --bg-color: #3a3500;
+  --text-color: #fffce0;
+}
+
+body.theme-red.dark-mode .quote-box,
+body.theme-red.dark-mode .factbox {
+  --accent-color: #ffb0a8;
+  --bg-color: #3a1816;
+  --text-color: #fff1f1;
+}
+
+body.theme-pink.dark-mode .quote-box,
+body.theme-pink.dark-mode .factbox {
+  --accent-color: #ffb3d1;
+  --bg-color: #3c2432;
+  --text-color: #ffeef6;
+}
+
+/* 🛠 TIP BOX */
+.tip-box {
+  margin: 1em 0;
+  padding: 1em;
+  font-family: sans-serif;
+  border-left: 4px solid var(--accent-color, #007f5f);
+  background-color: var(--bg-color, #f0fdf4);
+  color: var(--text-color, #222);
+}
+
+/* 🧑‍💻 ROLE CARD */
+.role-card {
+  margin: 1em 0;
+  padding: 1em;
+  font-family: sans-serif;
+  border-left: 4px solid var(--accent-color, #005eb8);
+  background-color: var(--bg-color, #e6f0fa);
+  color: var(--text-color, #003366);
+  border-radius: 0.5em;
+}
+
+/* ♿ ACCESSIBILITY FLAG */
+.accessibility-flag {
+  margin: 1em 0;
+  padding: 1em;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-left: 4px solid var(--accent-color, #000);
+  background-color: var(--bg-color, #fffde7);
+  color: var(--text-color, #1a1a1a);
+}
+
+/* 🔄 UPDATE BANNER */
+.update-banner {
+  margin: 1em 0;
+  padding: 1em;
+  font-family: sans-serif;
+  border-left: 4px solid var(--accent-color, #ffcc00);
+  background-color: var(--bg-color, #fff8c4);
+  color: var(--text-color, #1a1a1a);
+}
+
+/* 🎛 DOHICKY GRID */
+.dohicky-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.dohicky-item {
+  padding: 1em;
+  font-family: sans-serif;
+  text-align: center;
+  border: 2px solid var(--accent-color, #0072ce);
+  background-color: var(--bg-color, #e6f0fa);
+  color: var(--text-color, #003366);
+  border-radius: 0.5em;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Apply to all dohickies */
+body[class*="theme-"] .tip-box,
+body[class*="theme-"] .role-card,
+body[class*="theme-"] .accessibility-flag,
+body[class*="theme-"] .update-banner,
+body[class*="theme-"] .dohicky-item {
+  --accent-color: inherit;
+  --bg-color: inherit;
+  --text-color: inherit;
+}
+
+/* NHS Blue */
+body.theme-blue {
+  --accent-color: #0072ce;
+  --bg-color: #e6f0fa;
+  --text-color: #003366;
+}
+
+/* NHS Green */
+body.theme-green {
+  --accent-color: #007f3b;
+  --bg-color: #e9f5ee;
+  --text-color: #004d3c;
+}
+
+/* Calm Grey */
+body.theme-calm {
+  --accent-color: #4c4c4c;
+  --bg-color: #f2f2f2;
+  --text-color: #2a2a2a;
+}
+
+/* NHS Purple */
+body.theme-purple {
+  --accent-color: #5e2a84;
+  --bg-color: #f3f0f9;
+  --text-color: #3c1663;
+}
+
+/* NHS Grey */
+body.theme-grey {
+  --accent-color: #425563;
+  --bg-color: #f4f4f4;
+  --text-color: #1a1a1a;
+}
+
+/* NHS Yellow */
+body.theme-yellow {
+  --accent-color: #fdd835;
+  --bg-color: #fffde7;
+  --text-color: #1a1a1a;
+}
+
+/* NHS Red */
+body.theme-red {
+  --accent-color: #aa1c17;
+  --bg-color: #fff6f6;
+  --text-color: #1a1a1a;
+}
+
+/* NHS Pink */
+body.theme-pink {
+  --accent-color: #5e1f42;
+  --bg-color: #fdf4f7;
+  --text-color: #1a1a1a;
+}
+
+/* High Contrast */
+body.theme-contrast {
+  --accent-color: yellow;
+  --bg-color: #000;
+  --text-color: #fff;
+}
+
+body.theme-blue.dark-mode {
+  --accent-color: #ffcc00;
+  --bg-color: #1e1e1e;
+  --text-color: #eee;
+}
+
+body.theme-green.dark-mode {
+  --accent-color: #33a36a;
+  --bg-color: #003d29;
+  --text-color: #e0f6eb;
+}
+
+body.theme-calm.dark-mode {
+  --accent-color: #888888;
+  --bg-color: #2b2b2b;
+  --text-color: #f2f2f2;
+}
+
+body.theme-purple.dark-mode {
+  --accent-color: #9d70c7;
+  --bg-color: #290f4d;
+  --text-color: #f0eaff;
+}
+
+body.theme-grey.dark-mode {
+  --accent-color: #a3afb7;
+  --bg-color: #353c42;
+  --text-color: #f0f4f7;
+}
+
+body.theme-yellow.dark-mode {
+  --accent-color: #fff176;
+  --bg-color: #3a3500;
+  --text-color: #fffce0;
+}
+
+body.theme-red.dark-mode {
+  --accent-color: #ffb0a8;
+  --bg-color: #3a1816;
+  --text-color: #fff1f1;
+}
+
+body.theme-pink.dark-mode {
+  --accent-color: #ffb3d1;
+  --bg-color: #3c2432;
+  --text-color: #ffeef6;
+}
+
+/* Navigation formatting */
+
+.nav-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-horizontal .nav-item {
+  position: relative;
+}
+
+.nav-horizontal .nav-link {
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  background-color: #0072ce;
 }

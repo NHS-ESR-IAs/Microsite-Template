@@ -105,15 +105,21 @@ window.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
   const darkMode = localStorage.getItem("darkMode") === "true";
 
-  if (savedTheme) {
-    document.body.classList.add("theme-" + savedTheme);
+  // Apply saved theme or default to NHS Blue
+  const themeToApply = savedTheme || "blue";
+  document.body.classList.add("theme-" + themeToApply);
 
-    // Sync both selectors
-    document.querySelectorAll(".theme-selector").forEach((el) => {
-      el.value = savedTheme;
-    });
+  // Sync both selectors
+  document.querySelectorAll(".theme-selector").forEach((el) => {
+    el.value = themeToApply;
+  });
+
+  // Store default theme if none was saved
+  if (!savedTheme) {
+    localStorage.setItem("theme", "blue");
   }
 
+  // Apply dark mode if enabled
   if (darkMode) {
     document.body.classList.add("dark-mode");
   }
@@ -165,3 +171,13 @@ window.addEventListener("scroll", () => {
     isCollapsed = false;
   }
 });
+
+// ==== One Nav Menu ====
+
+const navHTML = document.getElementById("shared-nav").innerHTML;
+// Wrap in a <ul> for horizontal layout
+document.getElementById(
+  "main-nav"
+).innerHTML = `<ul class="nav nav-horizontal">${navHTML}</ul>`;
+
+document.getElementById("sidebar-nav").innerHTML = navHTML;
