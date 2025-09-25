@@ -2665,5 +2665,6 @@ body.theme-pink.dark-mode {
 }
 
 .dropdown-menu {
-  background-color: #0072ce;
+  background-color: transparent;
+  border: transparent;
 }
