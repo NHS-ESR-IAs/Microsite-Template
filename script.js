@@ -1,9 +1,29 @@
-// Toggle page visibility
+// Toggle page visibility and re-render Mermaid diagrams with larger font size
 function showPage(pageId) {
+  // Hide all pages
   document
     .querySelectorAll(".page")
     .forEach((page) => page.classList.remove("active"));
-  document.getElementById(pageId)?.classList.add("active");
+
+  // Show the requested page
+  const activePage = document.getElementById(pageId);
+  if (activePage) {
+    activePage.classList.add("active");
+
+    // Re-initialize Mermaid with custom font size
+    if (window.mermaid) {
+      mermaid.initialize({
+        theme: "default",
+        themeVariables: {
+          fontSize: "22px", // Try "20px" or "22px" for extra clarity
+          fontFamily: "Segoe UI, sans-serif",
+        },
+      });
+
+      // Render Mermaid diagrams inside the active page
+      mermaid.init(undefined, activePage.querySelectorAll(".mermaid"));
+    }
+  }
 }
 
 // Search input: filters pages + cards
@@ -47,6 +67,31 @@ function openPopup(url) {
 }
 
 // ===== THEME SWITCHER =====
+function applyMermaidTheme() {
+  const styles = getComputedStyle(document.body);
+
+  const accent = styles.getPropertyValue("--accent-color").trim();
+  const text = styles.getPropertyValue("--text-color").trim();
+  const isDark =
+    document.body.classList.contains("dark-mode") ||
+    document.body.classList.contains("theme-contrast");
+
+  const line = isDark ? "#ffffff" : accent;
+
+  if (window.mermaid) {
+    mermaid.initialize({
+      theme: "default",
+      themeVariables: {
+        primaryColor: accent,
+        primaryTextColor: text,
+        lineColor: line,
+        fontSize: "18px",
+        fontFamily: "Segoe UI, sans-serif",
+      },
+    });
+  }
+}
+
 const themeSelectors = document.querySelectorAll(".theme-selector");
 
 themeSelectors.forEach((selector) => {
