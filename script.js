@@ -226,3 +226,25 @@ document.getElementById(
 ).innerHTML = `<ul class="nav nav-horizontal">${navHTML}</ul>`;
 
 document.getElementById("sidebar-nav").innerHTML = navHTML;
+
+// ===== Copy Snippet to Clipboard =====
+
+function copyVisibleSnippet() {
+  // Find the currently visible page
+  const visiblePage = Array.from(document.querySelectorAll(".page")).find(
+    (page) => page.offsetParent !== null
+  );
+
+  if (!visiblePage) return;
+
+  // Within that page, find the snippet
+  const snippet = visiblePage.querySelector(".snippet");
+  if (snippet) {
+    navigator.clipboard.writeText(snippet.innerText).then(() => {
+      // Optional: nicer feedback than alert()
+      const btn = visiblePage.querySelector("button");
+      btn.textContent = "Copied!";
+      setTimeout(() => (btn.textContent = "Copy"), 1500);
+    });
+  }
+}
